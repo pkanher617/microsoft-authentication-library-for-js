@@ -28,21 +28,19 @@ steps:
   inputs:
     script: |
       cd microsoft-authentication-library-for-js
-
+      
       git subtree split --prefix lib/msal-browser -b msal-browser-latest
       
-      git push -u origin msal-browser-latest'
+      git push -u origin msal-browser-latest
 
 - task: CmdLine@2
-  inputs:
-    script: '- task: CmdLine@2
   inputs:
     script: |
       cd microsoft-authentication-library-for-js
       
       git subtree split --prefix lib/msal-common -b msal-common-latest
       
-      git push -u origin msal-common-latest'
+      git push -u origin msal-common-latest
 
 - checkout: git://Engineering/msal-js-test
 
