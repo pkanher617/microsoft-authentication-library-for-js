@@ -9,6 +9,13 @@ trigger:
 pool:
   vmImage: ubuntu-latest
 
+resources:
+  repositories:
+  - repository: msal-1p
+    type: git
+    endpoint: msal-js-test
+    name: Engineering/msal-js-test
+
 steps:
 - task: NodeTool@0
   inputs:
