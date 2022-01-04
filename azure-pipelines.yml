@@ -18,10 +18,11 @@ steps:
 - checkout: self
   persistCredentials: true
 
-- script: |
-    npm install
-    npm run build
-  displayName: 'npm install and build'
+# - script: |
+#     cd microsoft-authentication-library-for-js
+#     npm install
+#     npm run build
+#   displayName: 'npm install and build'
 
 - task: CmdLine@2
   inputs:
