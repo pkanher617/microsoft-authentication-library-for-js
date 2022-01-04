@@ -22,8 +22,18 @@ steps:
 
 - task: CmdLine@2
   inputs:
-    script: 'git subtree split --prefix lib/msal-browser -b msal-browser-latest'
+    script: '- task: CmdLine@2
+  inputs:
+    script: |
+      git subtree split --prefix lib/msal-browser -b msal-browser-latest
+      
+      git push origin msal-browser-latest'
 
 - task: CmdLine@2
   inputs:
-    script: 'git subtree split --prefix lib/msal-common -b msal-common-latest'
+    script: '- task: CmdLine@2
+  inputs:
+    script: |
+      git subtree split --prefix lib/msal-common -b msal-common-latest
+      
+      git push origin msal-common-latest'
