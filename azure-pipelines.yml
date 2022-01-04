@@ -25,6 +25,8 @@ steps:
 - checkout: self
   persistCredentials: true
 
+- checkout: msal-1p
+
 - script: |
     npm install
     npm run build
