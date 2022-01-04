@@ -24,23 +24,23 @@ steps:
 #     npm run build
 #   displayName: 'npm install and build'
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      cd microsoft-authentication-library-for-js
+# - task: CmdLine@2
+#   inputs:
+#     script: |
+#       cd microsoft-authentication-library-for-js
       
-      git subtree split --prefix lib/msal-browser -b msal-browser-latest
+#       git subtree split --prefix lib/msal-browser -b msal-browser-latest
       
-      git push -u origin msal-browser-latest
+#       git push -u origin msal-browser-latest
 
-- task: CmdLine@2
-  inputs:
-    script: |
-      cd microsoft-authentication-library-for-js
+# - task: CmdLine@2
+#   inputs:
+#     script: |
+#       cd microsoft-authentication-library-for-js
       
-      git subtree split --prefix lib/msal-common -b msal-common-latest
+#       git subtree split --prefix lib/msal-common -b msal-common-latest
       
-      git push -u origin msal-common-latest
+#       git push -u origin msal-common-latest
 
 - checkout: git://Engineering/msal-js-test
   persistCredentials: true
@@ -49,6 +49,9 @@ steps:
   inputs:
     script: |
       cd msal-js-test
+
+      git config --global user.email "msaljs@microsoft.com"
+      git config --global user.name "MSAL CI"
       
       git subtree add --prefix msal-browser https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-browser-latest --squash
       
