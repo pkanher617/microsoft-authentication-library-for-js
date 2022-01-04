@@ -20,6 +20,10 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
+steps:
+- checkout: self
+  persistCredentials: true
+
 - task: CmdLine@2
   inputs:
     script: '- task: CmdLine@2
