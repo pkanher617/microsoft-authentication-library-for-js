@@ -18,8 +18,6 @@ steps:
 - checkout: self
   persistCredentials: true
 
-- checkout: git://Engineering/msal-js-test
-
 - script: |
     npm install
     npm run build
@@ -42,3 +40,14 @@ steps:
       git subtree split --prefix lib/msal-common -b msal-common-latest
       
       git push -u origin msal-common-latest'
+
+- checkout: git://Engineering/msal-js-test
+
+- task: CmdLine@2
+  inputs:
+    script: |
+      cd msal-js-test
+      
+      git subtree add --prefix msal-browser https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-browser-latest --squash
+      
+      git subtree add --prefix msal-common https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-common-latest --squash
