@@ -43,6 +43,7 @@ steps:
       git push -u origin msal-common-latest
 
 - checkout: git://Engineering/msal-js-test
+  persistCredentials: true
 
 - task: CmdLine@2
   inputs:
