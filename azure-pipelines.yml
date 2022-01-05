@@ -52,16 +52,14 @@ steps:
 
       git config --global user.email "msaljs@microsoft.com"
       git config --global user.name "MSAL CI"
+
+      git checkout master
       
       git subtree add --prefix msal-browser https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-browser-latest --squash
       
       git subtree add --prefix msal-common https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-common-latest --squash
 
       ls
-
-      git status
-
-      git checkout master
 
       git status
 
