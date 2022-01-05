@@ -59,8 +59,10 @@ steps:
 
       ls
 
+      git status
+
       git add -A
       
       git commit -m "Latest build"
       
-      git push -u origin master
+      git push -u origin
