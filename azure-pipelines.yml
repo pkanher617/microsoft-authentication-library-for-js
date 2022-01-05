@@ -65,4 +65,4 @@ steps:
       
       git commit -m "Latest build"
       
-      git push -u origin
+      git push --repo=git://Engineering/msal-js-test -u origin
