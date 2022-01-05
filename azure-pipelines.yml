@@ -56,3 +56,9 @@ steps:
       git subtree add --prefix msal-browser https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-browser-latest --squash
       
       git subtree add --prefix msal-common https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-common-latest --squash
+
+      git add -A
+      
+      git commit -m "Latest build"
+      
+      git push
