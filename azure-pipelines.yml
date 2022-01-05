@@ -61,7 +61,11 @@ steps:
 
       git status
 
-      git add msal-browser msal-common
+      git checkout master
+
+      git status
+
+      git add .
       
       git commit -m "Latest build"
       
