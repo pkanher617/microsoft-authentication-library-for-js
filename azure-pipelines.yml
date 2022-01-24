@@ -55,9 +55,9 @@ steps:
 
       git checkout master
       
-      git subtree push --prefix msal-browser https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-browser-latest --squash
+      git subtree push --prefix msal-browser https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-browser-latest
       
-      git subtree push --prefix msal-common https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-common-latest --squash
+      git subtree push --prefix msal-common https://github.com/pkanher617/microsoft-authentication-library-for-js.git msal-common-latest
 
       git add .
       
